@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal portfolio</title>
+  <link rel="icon" type="Images/png" href="favicon.png">
+  <link rel="icon" href="Images/favicon.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+    } 
+    body {
+        font-family: 'Comic Sans MS' , cursive;
+        background: linear-gradient(135deg, rgb(145, 143, 143), white, rgb(241, 177, 100));
+        background-size:400% 400%;
+        color: rgb(24, 23, 23); 
+        line-height: 1.6;
+        animation: bgAnimation 8s ease infinite;
+
+
+    } 
+    .p{
+      padding:10px
+    }      
+    @keyframes bgAnimation {
+      0% {background-position: 0% 50%;}
+      50% { background-position: 100% 50%; }
+      100% {background-position: 0% 50%; }
+    } 
+    .navbar {
+      width: 100%;
+      background: #222;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .top-left-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .top-left-nav a{
+      text-decoration: none;
+      color: grey;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .top-left-nav a:hover {
+      color: rgb(108, 203, 235);
+    }
+    .hero{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      gap: 40px;
+      text-align: center;
+    }
+    .hero h1{
+      font-family: 'Brush Script MT', cursive;
+      font-size: 4rem;
+      color: rgb(10, 10, 10);
+    }
+
+    .hero p{
+      font-size: 1.2rem;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+
+    .hero img{
+      width: 250px;
+      height: 250px;
+      border-radius: 50px;
+      object-fit: cover;
+      border: 5px solid rgb(125, 212, 240);
+      animation: profile 15s infinite;
+
+    }
+    .project-block{
+      background: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 20px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+      display: flex;
+      flex-direction: column; 
+      gap: 20px; 
+      max-width: 900px; 
+      margin: auto;
+
+    }
+    .image-slot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      max-width: 100%;
+      height: auto;
+    }
+    .Image-slot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      flex-wrap: wrap;
+    }
+    @keyframes imgAnimation {
+      0%   { transform: translateY(0); }
+      100%  { transform: translateY(+10px); }
+    } 
+    
+    .Achievements-x{
+      background: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 20px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+      display: flex;
+      flex-direction: column; 
+      gap: 20px; 
+      max-width: 900px; 
+      margin: auto;
+    }
+
+    @keyframes profile{
+      0%   { transform: translateY(0); }
+      20%  { transform: translateY(-10px); }
+      40% { transform: translateX(+10px);}
+      60% { transform: translateY(+10px);}
+      80% {transform: translateX(-10px);}
+      100% { transform: translateY(0); }
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: auto;
+      background: 20px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .contact{
+      background: black;
+      color: white;
+
+    }
+    .contact h3 {
+      color: #5ebdf7;
+    }
+
+    .contact ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .contact li {
+      margin: 8px 0;
+    }
+
+    .contact a {
+      color: lightblue;
+      text-decoration: none;
+    }
+    .contact a:hover{
+      text-decoration:lightblue underline;
+      
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .top-left-nav a {
+        font-size: 16px;
+        margin: 8px;
+      }
+    }
+    @media(max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p{
+        font-size: 1rem;
+      }
+      section h3 {
+        font-size: 1.5rem;
+      }
+    }
+    #contact{
+      margin: 0px;
+      width:100%;
+    }
+     .project-block {
+        align-items: row;
+     }
+    
+
+  </style>
+  </head>
+  <body>
+  <div class="navbar">
+    <nav class="top-left-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#project" >Projects</a>
+      <a href="#achievement">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div class="hero" id="home">
+    <div>
+      <h1>... Amogh Johari ...</h1>
+      <p>Welcome to the glimpses of my life. A passionate learner and aspiring developer. I enjoy turning ideas into meaningful projects.</p>
+    </div>
+    <img src="Images/myphotos.jpg" alt="Profile Picture">
+  </div>
+
+  <section id="about">
+    <h3>\ About Me</h3>
+    <p>
+      Hello! Welcome to my About Me section. Where do I start? Ahh yes, my hobbies: I like to read, play, code but what I love doing the most is learning new things...</p>
+  </section>
+  <section id="project">
+  <h3 >\ Projects</h3>
+
+  <div class="project-block">
+    <div class="project-badge">🌤 Hackathon</div>
+      <div >☀️</div>
+      <h3>Weather App</h3>
+      <p style="background-color: lightcyan;">
+        I built this real-time weather app during a Hackathon this August. It involved working with APIs, 
+        designing a simple UI, and displaying live weather data based on user input. 
+        It was my first experience using APIs, and I learned how to connect frontend logic with real data.
+      </p>
+      <div class="images-container2">
+            <div class="image-slot">
+                <img src="Images/weatherapi.png" alt="" style=" width: 700px; height: 300px; max-width: 100%; height: auto;">
+            </div>
+
+    <div >🎮 Team Project</div>
+      <div >👫</div>
+      <h3>Rock Paper Scissors Game</h3>
+      <p style="background-color: lightcyan;">
+        This was a fun team hackathon project. We built a simple Rock-Paper-Scissors game using JavaScript. 
+        Even though we couldn't complete everything within the time limit, we learned a lot about teamwork, 
+        problem-solving, and debugging together.
+      </p>
+
+    <div>🤖 Robotics</div>
+      <div>⚙️</div>
+      <h3>Step Climber Robot</h3>
+      <p style="background-color: lightcyan;">
+        Back in middle school, I designed a small robot that could climb steps while carrying light objects. 
+        It was a simple concept but gave me a real sense of how mechanical design and programming come together. 
+        That experience sparked my curiosity in building and experimenting with new ideas.
+      </p>
+      
+      <div>⚙️ Drone</div>
+      <div>✈️</div>
+      <h3>Drones</h3>
+      <p style="background-color: lightcyan;">
+       Just recently, I had attended a 2-day workshop at IISc Bangalore on Drone Technology. As much fun as the workshop was, the drone-building project was even better. I learnt how to contruct and caliberate both manual and autonomous drones. One of my best experiences so far.
+      </p>
+            <div class="image-slot">
+                <img src="Images/2IISc.png" alt="" style=" width: 400px; height: 300px; margin: 20px">
+        </div>
+      
+      </div>
+    </div>
+    
+      <section id="achievement">
+        <h3>\ Achievements</h3>
+        <div class="Achievements-x">
+        <div>🤖</div>
+          <h3>World Robotics Olympiad</h3>
+        <div class="content">
+            <p style="background-color: lightcyan;">Represented my school at the regionals and nationals level as a part of a 3-man team "Automation" for the World Robotics Olympiad. Built 2 robots each performing different sets of tasks at the regional and national level</p>
+        </div>
+
+        <div class="images-container">
+            <div class="Image-slot">
+                <img src="Images/WRON.png" alt="" style=" width: 200px; height: 300px;">
+                <img src="Images/WROR.png" alt="" style=" width: 200px; height: 300px;">
+        </div>
+            <div>🥋</div>
+          <h3>Taekwondo</h3>
+        <div class="content">
+            <p style="background-color: lightcyan;"> I am a Black Belt in Taekwondo, one of my most proud achievemnets, securing it at the age of 11. </p>
+        </div>
+          </div>
+    </section>
+  <section class="contact" id="contact">
+    <footer class="footer">
+    <h3>\ Contact Me</h3>
+    <ul>
+      <li style="padding:0;"><a href="https://linkedin.com/in/amogh-johari-5115ab36a" target="_blank">LinkedIn</a></li>
+      <li style="padding:0;"><a href="https://github.com/Amogh17J" target="_blank">GitHub</a></li>
+      <li style="padding:0;"><a href="https://codeforces.com/profile/17amxghJ" target="_blank">Codeforces</a></li>
+      <li style="color:lightblue;padding:0;">Phone: 99999xxxxx</li><br>
+      <li>© 2025 Amogh Johari. All rights reserved.</li>
+      </ul>
+      </footer>
+    <section>
+      <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+    </script>
+</body>
+</html>
